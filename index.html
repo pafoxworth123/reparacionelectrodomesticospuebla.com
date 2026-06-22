@@ -33,7 +33,6 @@
     }
   </script>
   <style>
-    /* Reset & Base */
     * {
       margin: 0;
       padding: 0;
@@ -53,7 +52,6 @@
       padding: 0 1.25rem;
     }
 
-    /* Header / Nav */
     .navbar {
       background-color: #0f172a;
       color: white;
@@ -94,7 +92,6 @@
       background: #eab308;
     }
 
-    /* Hero */
     .hero {
       padding: 2.5rem 0 2rem;
       background: linear-gradient(145deg, #f1f5f9 0%, #dce1e8 100%);
@@ -174,32 +171,33 @@
       transform: scale(1.02);
     }
 
-    /* Brand showcase */
+    /* Brand showcase - 3 per row, 50% larger */
     .brand-showcase {
       background: white;
-      padding: 1.5rem;
+      padding: 1.8rem;
       border-radius: 24px;
       box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem 1.8rem;
-      align-items: center;
       border: 1px solid #d1d9e6;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      justify-items: center;
+      align-items: center;
     }
     .brand-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       font-weight: 600;
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: #475569;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      width: 100%;
     }
     .brand-item img {
-      width: 72px;
-      height: 72px;
+      width: 108px;
+      height: 108px;
       object-fit: contain;
       background: transparent;
       filter: drop-shadow(0 2px 6px rgba(0,0,0,0.06));
@@ -209,10 +207,9 @@
       transform: scale(1.05);
     }
     .brand-item span {
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
-    /* Section */
     .section {
       padding: 3rem 0;
     }
@@ -227,7 +224,6 @@
       padding: 0 0.5rem;
     }
 
-    /* Cards */
     .card-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -259,7 +255,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Form - Clean version (no problem description) */
     .form-box {
       background: white;
       border-radius: 28px;
@@ -296,7 +291,6 @@
       box-shadow: 0 0 0 3px rgba(15,23,42,0.1);
     }
 
-    /* Testimonials */
     .testimonial-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -329,7 +323,6 @@
       letter-spacing: 2px;
     }
 
-    /* Address & Info */
     .info-block {
       background: #0f172a;
       color: white;
@@ -361,7 +354,6 @@
       text-decoration: underline;
     }
 
-    /* Footer */
     .footer {
       background: #0f172a;
       color: #94a3b8;
@@ -375,7 +367,6 @@
       text-decoration: none;
     }
 
-    /* Floating WhatsApp */
     .whatsapp-float {
       position: fixed;
       bottom: 24px;
@@ -400,16 +391,26 @@
       background: #1ebe5d;
     }
 
-    /* Utility */
     .text-center { text-align: center; }
     .mt-2 { margin-top: 1.5rem; }
     .mb-1 { margin-bottom: 1rem; }
     .bg-gray { background: #e8ecf1; }
+
+    /* Mobile: 2 per row on smaller screens */
+    @media (max-width: 500px) {
+      .brand-showcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      .brand-item img {
+        width: 80px;
+        height: 80px;
+      }
+    }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav class="navbar">
   <div class="container">
     <div class="logo">🔧 <span>Reparaciones</span> Puebla</div>
@@ -417,7 +418,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
@@ -436,14 +436,13 @@
       <div class="brand-item"><img src="magimix.webp" alt="Magimix" loading="lazy"><span>Magimix</span></div>
       <div class="brand-item"><img src="oster.webp" alt="Oster" loading="lazy"><span>Oster</span></div>
       <div class="brand-item"><img src="productos_ninja.webp" alt="Ninja" loading="lazy"><span>Ninja</span></div>
-      <div class="brand-item"><img src="varios_electrodomesticos.webp" alt="Varios electrodomésticos" loading="lazy"><span>+ Varios</span></div>
       <div class="brand-item"><img src="royalprestigeblender.webp" alt="Royal Prestige Blender" loading="lazy"><span>Royal Blender</span></div>
       <div class="brand-item"><img src="royalprestigejuicer.webp" alt="Royal Prestige Juicer" loading="lazy"><span>Royal Juicer</span></div>
+      <div class="brand-item"><img src="varios_electrodomesticos.webp" alt="Varios electrodomésticos" loading="lazy"><span>+ Varios</span></div>
     </div>
   </div>
 </section>
 
-<!-- WHY US + SERVICES -->
 <section class="section">
   <div class="container">
     <h2 class="section-title">🔧 <span>¿Por qué confiar</span> en nosotros?</h2>
@@ -458,7 +457,6 @@
   </div>
 </section>
 
-<!-- FORM - CLEAN VERSION (no problem description) -->
 <section class="section bg-gray" id="formulario">
   <div class="container">
     <h2 class="section-title">📝 <span>Solicita tu presupuesto</span> gratis</h2>
@@ -495,7 +493,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="section">
   <div class="container">
     <h2 class="section-title">🗣️ <span>Lo que dicen</span> nuestros clientes</h2>
@@ -509,7 +506,6 @@
   </div>
 </section>
 
-<!-- CONTACT & ADDRESS -->
 <section class="section bg-gray" id="contacto">
   <div class="container">
     <h2 class="section-title">📍 <span>Visítanos</span> o contáctanos</h2>
@@ -525,7 +521,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <p>© 2026 Reparaciones Electrodomésticos Puebla · Todos los derechos reservados.</p>
@@ -533,12 +528,10 @@
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON -->
 <a href="https://wa.me/522216498364" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
   💬
 </a>
 
-<!-- Form handler -->
 <script>
   document.getElementById('cotizador')?.addEventListener('submit', function(e) {
     e.preventDefault();
