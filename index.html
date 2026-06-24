@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Reparación de Electrodomésticos en Puebla | Taller de Confianza</title>
-  <meta name="description" content="Reparación de electrodomésticos en Puebla con 6 meses de garantía. Presupuesto gratis en 24 hrs. Especialistas en licuadoras, tostadores y freidoras de aire.">
-  <meta name="keywords" content="reparación electrodomésticos Puebla, taller eléctrico, reparación licuadoras, reparación tostadores, reparación freidoras de aire">
+  <title>Reparación de Electrodomésticos en Puebla | Reparaciones Electrodomésticos Puebla</title>
+  <meta name="description" content="Reparación profesional de electrodomésticos en Puebla. Licuadoras, tostadores, freidoras de aire y más. Garantía de 6 meses, presupuestos gratis en 24 hrs. Solo entrega en taller.">
+  <meta name="keywords" content="reparación electrodomésticos Puebla, reparación licuadoras, reparación tostadores, taller eléctrico Las Animas">
   <link rel="canonical" href="https://reparacionelectrodomesticospuebla.com">
   <meta property="og:title" content="Reparación de Electrodomésticos en Puebla">
-  <meta property="og:description" content="6 meses de garantía, presupuesto gratis en 24 hrs. Solo entrega en taller.">
+  <meta property="og:description" content="Reparación profesional con 6 meses de garantía. Presupuestos gratis en 24 hrs.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://reparacionelectrodomesticospuebla.com">
   <meta name="theme-color" content="#0f172a">
@@ -41,7 +41,7 @@
     }
 
     body {
-      background-color: #94a3b8;
+      background-color: #cbd5e1;
       color: #0f172a;
       line-height: 1.6;
     }
@@ -92,11 +92,34 @@
       background: #eab308;
     }
 
+    /* Hero with background image */
     .hero {
       padding: 2.5rem 0 2rem;
-      background: linear-gradient(145deg, #a8b4c8 0%, #94a3b8 100%);
-      border-bottom: 1px solid #7f8ea3;
+      background-image: url('hands-working-airfryer.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      border-bottom: 1px solid #b0b8c4;
     }
+    
+    /* Overlay to keep text readable */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(203, 213, 225, 0.88);
+      z-index: 1;
+    }
+    
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    
     .hero-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -114,12 +137,15 @@
       line-height: 1.2;
       margin-bottom: 0.75rem;
     }
-    .hero h1 .highlight {
-      color: #b45309;
+    
+    /* FULL heading highlight */
+    .hero h1 .highlight-full {
       background: #fef3c7;
-      padding: 0 0.4rem;
+      padding: 0.1rem 0.8rem;
       display: inline-block;
+      border-radius: 8px;
     }
+    
     .hero p {
       font-size: 1.1rem;
       color: #1e293b;
@@ -175,8 +201,8 @@
       background: white;
       padding: 1.8rem;
       border-radius: 24px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-      border: 1px solid #7f8ea3;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      border: 1px solid #b0b8c4;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
@@ -218,9 +244,12 @@
       margin-bottom: 1.5rem;
       text-align: center;
     }
-    .section-title span {
+    /* FULL section title highlight */
+    .section-title .highlight-full {
       background: #fef3c7;
-      padding: 0 0.5rem;
+      padding: 0.1rem 0.8rem;
+      border-radius: 8px;
+      display: inline-block;
     }
 
     .card-grid {
@@ -242,26 +271,29 @@
       background: white;
       border-radius: 24px;
       padding: 1.8rem 1.5rem;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
       transition: 0.2s;
-      border: 1px solid #7f8ea3;
+      border: 1px solid #b0b8c4;
     }
     .card:hover {
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
     }
     .card h3 {
       font-size: 1.3rem;
       margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .form-box {
       background: white;
       border-radius: 28px;
       padding: 2rem 1.8rem;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-      max-width: 600px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      max-width: 700px;
       margin: 0 auto;
-      border: 1px solid #7f8ea3;
+      border: 1px solid #b0b8c4;
     }
     .form-group {
       margin-bottom: 1.2rem;
@@ -273,6 +305,7 @@
       font-size: 0.95rem;
     }
     .form-group input,
+    .form-group textarea,
     .form-group select {
       width: 100%;
       padding: 0.7rem 1rem;
@@ -283,11 +316,16 @@
       background: #f1f5f9;
     }
     .form-group input:focus,
-    .form-group select:focus {
+    .form-group textarea:focus {
       outline: none;
       border-color: #0f172a;
       background: white;
       box-shadow: 0 0 0 3px rgba(15,23,42,0.1);
+    }
+    .form-group textarea {
+      min-height: 56px;
+      max-height: 80px;
+      resize: vertical;
     }
 
     .testimonial-grid {
@@ -305,8 +343,8 @@
       padding: 1.5rem;
       border-radius: 20px;
       border-left: 6px solid #facc15;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-      border: 1px solid #7f8ea3;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      border: 1px solid #b0b8c4;
     }
     .testimonial p {
       font-style: italic;
@@ -393,7 +431,7 @@
     .text-center { text-align: center; }
     .mt-2 { margin-top: 1.5rem; }
     .mb-1 { margin-bottom: 1rem; }
-    .bg-gray { background: #94a3b8; }
+    .bg-gray { background: #cbd5e1; }
 
     @media (max-width: 500px) {
       .brand-showcase {
@@ -403,6 +441,9 @@
       .brand-item img {
         width: 80px;
         height: 80px;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
       }
     }
   </style>
@@ -420,7 +461,10 @@
   <div class="container hero-grid">
     <div>
       <div class="hero-badge">⭐ +240 reparaciones realizadas</div>
-      <h1>Reparación de <span class="highlight">electrodomésticos</span> en Puebla</h1>
+      <h1>
+        <span class="highlight-full">Reparación de electrodomésticos</span><br>
+        en Puebla
+      </h1>
       <p>Licuadoras, tostadores, freidoras de aire y más. <strong>Presupuesto gratis en 24 hrs</strong> · Garantía de 6 meses · Solo entrega en taller.</p>
       <div class="btn-group">
         <a href="#formulario" class="btn btn-primary">Solicitar presupuesto</a>
@@ -443,7 +487,7 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">🔧 <span>¿Por qué confiar</span> en nosotros?</h2>
+    <h2 class="section-title"><span class="highlight-full">¿Por qué confiar en nosotros?</span></h2>
     <div class="card-grid">
       <div class="card"><h3>🛠️ 6 meses de garantía</h3><p>Respaldamos cada reparación con 6 meses de garantía por escrito. Si algo falla, lo arreglamos sin costo.</p></div>
       <div class="card"><h3>📦 Solo entrega en taller</h3><p>No hacemos visitas a domicilio, lo que nos permite mantener precios competitivos y un flujo de trabajo eficiente.</p></div>
@@ -457,7 +501,7 @@
 
 <section class="section bg-gray" id="formulario">
   <div class="container">
-    <h2 class="section-title">📝 <span>Solicita tu presupuesto</span> gratis</h2>
+    <h2 class="section-title"><span class="highlight-full">Solicita tu presupuesto gratis</span></h2>
     <div class="form-box">
       <form action="#" method="POST" id="cotizador">
         <div class="form-group">
@@ -481,6 +525,10 @@
             <option>Otra</option>
           </select>
         </div>
+        <div class="form-group">
+          <label for="problema">Describe el problema brevemente</label>
+          <textarea id="problema" name="problema" placeholder="Ej. No enciende, hace ruido extraño..." rows="2" style="min-height:56px; max-height:80px;"></textarea>
+        </div>
         <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: space-between; align-items: center;">
           <button type="submit" class="btn btn-primary" style="flex:1;">Enviar solicitud</button>
           <span style="font-size:0.85rem; color:#475569;">🔒 Te responderemos en 24 hrs</span>
@@ -493,7 +541,7 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="section-title">🗣️ <span>Lo que dicen</span> nuestros clientes</h2>
+    <h2 class="section-title"><span class="highlight-full">Lo que dicen nuestros clientes</span></h2>
     <div class="testimonial-grid">
       <div class="testimonial"><div class="stars">★★★★★</div><p>"Repararon mi freidora de aire Ninja en 2 días, quedó como nueva. El precio fue justo y la garantía de 6 meses me da confianza."</p><div class="author">— Laura G., Puebla</div></div>
       <div class="testimonial"><div class="stars">★★★★★</div><p>"Mi licuadora Magimix dejó de funcionar y en menos de 24 horas ya tenía el presupuesto. Excelente atención por WhatsApp."</p><div class="author">— Carlos M., Cholula</div></div>
@@ -506,7 +554,7 @@
 
 <section class="section bg-gray" id="contacto">
   <div class="container">
-    <h2 class="section-title">📍 <span>Visítanos</span> o contáctanos</h2>
+    <h2 class="section-title"><span class="highlight-full">Visítanos o contáctanos</span></h2>
     <div class="info-block">
       <div><strong>🏠 Dirección</strong>2920 Sauces, Col. Benito Juarez, Las Animas, Puebla Puebla 72410</div>
       <div><strong>📱 Teléfono / WhatsApp</strong><a href="https://wa.me/522216498364" target="_blank">+52 221 649 8364</a></div>
@@ -539,8 +587,9 @@
       alert('Por favor, llena tu nombre y teléfono.');
       return;
     }
+    const problema = document.getElementById('problema')?.value || 'Sin descripción';
     const marca = document.getElementById('marca')?.value || 'No especificada';
-    const msg = `Hola, soy ${nombre}, mi teléfono es ${telefono}. Marca: ${marca}. Necesito presupuesto para reparación.`;
+    const msg = `Hola, soy ${nombre}, mi teléfono es ${telefono}. Marca: ${marca}. Problema: ${problema}`;
     const url = `https://wa.me/522216498364?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   });
